@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Administrativo</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="shortcut icon" href="img/administrative-favicon.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <section class="container">
+            <div class="area-logo">
+                <div class="logo">
+                    <img src="img/logo-frei.avif" alt="Logo do FREI">
+                </div>
+            </div>
+
+            <div class="area-login">
+                <h1 class="title">Login Painel Administrativo</h1>
+
+                <form action="/login" method="post" class="login">
+
+                    <label for="">E-mail: </label>
+                    <input type="email" name="email" id="email" class="input-login" placeholder="exemplodeemail@gmail.com" required>
+
+                    <label for="">Senha: </label>
+                    <input type="password" name="password" id="password" class="input-login" placeholder="Sua senha" required   >
+
+                    <button type="submit" class="enviar">Login</button>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

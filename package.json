@@ -1,0 +1,26 @@
+{
+  "name": "feira-profissoes-admin",
+  "version": "1.0.0",
+  "description": "Painel administrativo da feira de profissões.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eder-Rafael-Avila/feira-profissoes-admin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Eder-Rafael-Avila/feira-profissoes-admin/issues"
+  },
+  "homepage": "https://github.com/Eder-Rafael-Avila/feira-profissoes-admin#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mysql2": "^3.23.1"
+  }
+}
