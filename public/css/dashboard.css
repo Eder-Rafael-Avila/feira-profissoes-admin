@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+:root {
+    --cor-azul-claro: #3c60a8;
+    --cor-azul-principal: #1e4285;
+    --cor-destaque-secundario: #0f3374;
+    --cor-destaque: #002462;
+    --cor-laranja: #ee973e;
+}
+
+
+
+
+/* Configurações gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Header */
+
+.main-header {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    background-color: var(--cor-azul-claro);
+
+    padding: 1rem;
+    border-bottom: 1px solid var(--cor-destaque);
+}
+
+.logo img {
+    width: 7.5rem;
+}
+
+.logo, .conta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 12%;
+}
+
+.saudacao {
+    width: 85%;
+}
+
+.saudacao h1 {
+    color: rgb(255, 255, 255);
+
+    text-shadow: 1px 1px var(--cor-destaque);
+}
+
+.conta #nome-conta {
+    color: white;
+
+    font-size: 1.6rem;
+}
+
+.logout {
+    background-color: var(--cor-destaque-secundario);
+    color: white;
+    
+    padding: .5rem 2.5rem;
+    border: none;
+    border-radius: .8rem;
+    font-size: 1.6rem;
+    margin: 0 1rem;
+    box-shadow: 0px 0px 5px var(--cor-destaque);
+    cursor: pointer;
+
+    transition-duration: .2s;
+}
+
+.logout:hover {
+    opacity: .8;
+    font-size: 1.7rem;
+}
+
+/* Main */
+
+main {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+/* Sidebar */
+
+.hide {
+    display: none;
+    opacity: 0;
+}
+
+.active-bar {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.548);
+}
+
+.sidebar {
+    position: relative;
+    padding: 1rem;
+    width: 16%;
+}
+
+.sidebar .show {
+    position: absolute;
+
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.568);
+    border-radius: .5rem;
+    padding: .3rem;
+    width: 4.2rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.sidebar .show:hover {
+    width: 4.3rem;
+}
+
+.navegacao {
+    width: 100%;
+    list-style: none;
+    margin-top: 7rem;
+}
+
+.navegacao li {
+    font-size: 1.4rem;
+    margin: 3rem 1rem;
+}
+
+.navegacao li a {
+    color: var(--cor-destaque);
+    padding: .7rem .5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 1rem;
+}
+
+.navegacao li a:hover {
+    color: var(--cor-azul-principal);
+}
+
+.sidebar .logout {
+    font-size: 1.3rem;
+    margin: 0;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.575);
+}
+
+/* Content */

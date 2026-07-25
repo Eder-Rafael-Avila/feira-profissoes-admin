@@ -4,8 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel Administrativo</title>
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
-    <h1>Bem-vindo, administrador!</h1>
+    <header class="main-header">
+        <div class="logo">
+            <img src="img/logo-frei.avif" alt="Logo do FREI.">
+        </div>
+        <div class="saudacao">
+            <h1>Seja bem-vindo, <span id="nome-admin">[nome]</span>!</h1>
+        </div>
+        <div class="conta">
+            <span id="nome-conta">[nome]</span>
+
+            <button class="logout">
+                Sair
+            </button>
+        </div>
+    </header>
+    <main>
+        <nav class="sidebar">
+            <button class="show">
+                <span>
+                    <img src="img/bars-solid-full.svg" alt="Ícone do Menu">
+                </span>
+            </button>
+            
+        
+            <ul class="navegacao hide">
+                <li><a href="">Leitor QR</a></li>
+                <li><a href="">Gerador de QR Code</a></li>
+                <li><a href="">Configurações</a></li>
+                <li><button class="logout">Encerrar Sessão</button></li>
+            </ul>
+        </nav>
+        
+
+        <section class="content">
+            <header class="content-header">
+                <h2>Dashboard</h2>
+            </header>
+
+            <div class="infos">
+                <div class="card">
+
+                </div>
+                <div class="card">
+
+                </div>
+                <div class="card">
+
+                </div>
+            </div>
+            <div class="tabela">
+                <table>
+                    <thead>
+
+                        <tr>
+
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
+                            <th>Data de Inscrição</th>
+                            <th>Ações</th>
+                            
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/dashboard.js"></script>
 </body>
 </html>
