@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const mysql = require('mysql2');
+const session = require('express-session');
 
 const conexao = mysql.createConnection({
     host: 'localhost',
@@ -21,6 +22,16 @@ conexao.connect((erro) => {
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
+
+app.use(session({
+    secret: 'rithielly',
+    resave: false,
+    saveUninitialized: false
+}));
+
+app.get('/dashboard', verificarLogin, (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/dashboard.html'))
+})
 
 app.post('/login', (req, res) => {
 
@@ -53,7 +64,12 @@ app.post('/login', (req, res) => {
             const administrador = resultado[0];
 
             if (password === administrador.senha) {
-                res.redirect('/dashboard.html');
+                req.session.administrador = {
+                    id: administrador.id,
+                    nome: administrador.nome,
+                    email: administrador.email
+                };
+                res.redirect('/dashboard');
             } else {
                 console.log('Senha incorreta.');
                 res.send('Senha incorreta.');
@@ -64,6 +80,11 @@ app.post('/login', (req, res) => {
 
 })
 
+app.get('/teste', (req, res) => {
+    console.log(req.session);
+    res.send(req.session);
+})
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/login.html'));
 })
@@ -71,3 +92,17 @@ app.get('/', (req, res) => {
 app.listen(3000, () => {
     console.log('Servidor rodando!');
 })
+
+
+
+
+
+function verificarLogin(req, res, next) {
+
+    if(!req.session.administrador) {
+        return res.redirect('/');
+    }
+
+    next();
+
+}
