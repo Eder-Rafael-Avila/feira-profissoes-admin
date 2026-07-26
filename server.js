@@ -80,11 +80,6 @@ app.post('/login', (req, res) => {
 
 })
 
-app.get('/teste', (req, res) => {
-    console.log(req.session);
-    res.send(req.session);
-})
-
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/login.html'));
 })
