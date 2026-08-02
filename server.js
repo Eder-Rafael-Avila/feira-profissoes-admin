@@ -33,6 +33,12 @@ app.get('/dashboard', verificarLogin, (req, res) => {
     res.sendFile(path.join(__dirname, 'public/dashboard.html'))
 })
 
+app.get('/api/dashboard', verificarLogin, (req, res) => {
+    const sql = `
+        select
+    `
+})
+
 app.post('/login', (req, res) => {
 
     const email = req.body.email;
